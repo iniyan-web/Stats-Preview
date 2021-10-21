@@ -1,0 +1,134 @@
+:root {
+  --main-background: hsl(233, 47%, 7%);
+  --card-background: hsl(244, 38%, 16%);
+  --Soft-violet: hsl(277, 64%, 61%);
+  --softest-violet: hsla(277, 64%, 61%, 0.9);
+  --White: hsl(0, 0%, 100%);
+  --Slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Slightlyy-transparent-white: hsla(0, 0%, 100%, 0.6);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--main-background);
+}
+
+.flex-container {
+  width: 1000px;
+  height: 375px;
+  margin: 18vh auto;
+  background-color: var(--card-background);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-item1 {
+  flex: 50%;
+  order: 2;
+  background-color: var(--softest-violet);
+  background-image: url("image-header-desktop.jpg");
+  background-blend-mode: multiply;
+  background-size: cover;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.flex-item2 {
+  flex: 50%;
+  order: 1;
+}
+
+.main-text {
+  margin: 0;
+  padding: 60px 100px 10px 60px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  color: var(--White);
+}
+
+.main-text span {
+  color: var(--Soft-violet);
+}
+
+.main-para {
+  color: var(--Slightly-transparent-white);
+  padding: 0 100px 45px 60px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1.4rem;
+}
+
+.stats {
+  padding: 0 60px 60px 60px;
+}
+
+.stats h3 {
+  color: var(--Slightlyy-transparent-white);
+  margin-top: 6px;
+  text-transform: uppercase;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+}
+
+.stats p {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  color: var(--White);
+  margin: 0;
+  letter-spacing: 1px;
+  font-size: 20px;
+}
+
+.stat1, .stat2, .stat3 {
+  display: inline-block;
+  padding-right: 50px;
+}
+
+@media (max-width: 500px) {
+  body {
+    text-align: center;
+  }
+
+  .flex-container {
+    height: 900px;
+    width: 375px;
+    flex-direction: column-reverse;
+  }
+
+  .flex-item1 {
+    flex: 33%;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 0;
+  }
+
+  .flex-item2 {
+    flex: 67%;
+  }
+
+  .main-text {
+    padding: 30px 30px 0;
+  }
+
+  .main-para {
+    font-size: 16px;
+    padding: 0 60px;
+    line-height: 1.5rem;
+  }
+
+  .stats {
+    padding: 20px 60px 10px;
+  }
+
+  .stat1, .stat2, .stat3 {
+    display: block;
+    padding: 0;
+    margin-bottom: 45px;
+  }
+}
